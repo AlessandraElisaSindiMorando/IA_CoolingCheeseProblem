@@ -18,8 +18,12 @@ Let be
 
 The model of the system be described by the following equations:
 
-$$C_c{\dot{\theta}}_c(t)=k_{fc}\left(\theta_f(t)-\theta_c(t)\right)+\omega_c(t)$$
+```math
+C_c{\dot{\theta}}_c(t)=k_{fc}\left(\theta_f(t)-\theta_c(t)\right)+\omega_c(t)
+```
 
-$$C_f{\dot{\theta}}_f(t)=k_{fc}\left(\theta_c(t)-\theta_f(t)\right)+k_{af}\left(\theta_a(t)-\theta_f(t)\right)+q(t)+\omega_f(t)$$
+```math
+C_f{\dot{\theta}}_f(t)=k_{fc}\left(\theta_c(t)-\theta_f(t)\right)+k_{af}\left(\theta_a(t)-\theta_f(t)\right)+q(t)+\omega_f(t)
+```
 
 In the tutorial the continous-time system is modeled in Simulink and by sampling the output $y\left(t\right)=\theta_f\left(t\right)$ and a relay and a PID controller are defined in order to keep $\theta_c(t)$ close to a reference temperature $\hat{\theta}_c(t)$ which is unmeasurable using the measured output. Simulations are carried out and metrics are defined to quantify the performances of the two methods.
