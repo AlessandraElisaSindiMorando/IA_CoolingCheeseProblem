@@ -4,6 +4,7 @@ clear;
 clc;
 % Now we can start...
 %==========================================
+%% Point 1)
 % Horizon 24 h = 24*60 min = 24*60*60 s
 H = 24 * 60 * 60;% [s]
 
@@ -50,7 +51,23 @@ load('ExtractedData.mat')
 % 'Fromworkspace' block in Simulink needs timeseries 
 %The '.*' operator is used to multiply each entry of the vector by 60*60
 %(indeed it's given in hours, but SI time unit is second s). Transpose
-%since we want a row vector, while it's a 
+%since we want a row vector, while it's a column vector.
 timeseriesHatTheta_c = timeseries(hatTheta_c', time.*(60*60)');
 timeseriesHatTheta_a = timeseries(hatTheta_a', time.*(60*60)');
 
+%% Point 2)
+% Sample time
+Ts = 1;%[s]
+
+%% Point 3)
+% Initial theta_c
+theta0_c = Celsius2Kelvin(25);
+% Initial theta_f
+theta0_f = Celsius2Kelvin(8);
+
+% ticks 
+xTicks = time.*(60*60)';
+xLabels = ['0h','1h','2h','3h','4h','5h','6h','7h','8h','10h','11h','12h',..]
+
+%% Point 4)
+q_star = 1000;

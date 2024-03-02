@@ -4,6 +4,7 @@ clear;
 clc;
 % Now we can start...
 %==========================================
+%% Point 1)
 % Horizon 24 h = 24*60 min = 24*60*60 s
 H = 24 * 60 * 60;% [s]
 
@@ -64,4 +65,4 @@ theta0_c = Celsius2Kelvin(25);
 % Initial theta_f
 theta0_f = Celsius2Kelvin(8);
 %% Point 4)
-q_star = 1000;
+q_star = 100;
